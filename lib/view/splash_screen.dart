@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_practise/utils/utils.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -11,6 +12,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Utils.toastMessageCenter('Center');
+        Utils.toastMessage('Bottom');
+      }),
+    );
   }
 }
