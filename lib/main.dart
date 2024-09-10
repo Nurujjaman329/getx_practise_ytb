@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_practise/res/getx_localizations/languages.dart';
 import 'package:getx_practise/res/routes/routes.dart';
 import 'package:getx_practise/view/splash_screen.dart';
 import 'package:get/get.dart';
@@ -14,10 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'GetX Practise',
+      translations: Languages(),
+      locale: Locale('bn','BD'),
+      fallbackLocale: Locale('en', 'US'),
       theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+           primarySwatch: Colors.blue
       ),
       debugShowCheckedModeBanner: false,
 
