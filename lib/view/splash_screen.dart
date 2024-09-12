@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_practise/res/assets/image_assets.dart';
 import 'package:getx_practise/res/components/internet_exceptions_widget.dart';
 import 'package:getx_practise/utils/utils.dart';
+import 'package:getx_practise/view_models/services/splash_services.dart';
 
 import '../res/components/round_button.dart';
 
@@ -15,6 +16,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  SplashServices splashServices = SplashServices();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    splashServices.isLogin();
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -22,19 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
       appBar: AppBar(title: Text('email_hint'.tr),
 
       ),
-      body: Column(
-        children: [
-          RoundButton(onPress: (){},
-            title: 'Login',
-           width: double.infinity, loading: true,
-          ),
-          SizedBox(height: 10.0,),
-          RoundButton(onPress: (){},
-            title: 'Login',
-            width: double.infinity, loading: false,
-          ),
-        ],
-      ),
+
 
     );
   }
