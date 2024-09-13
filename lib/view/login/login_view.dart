@@ -78,7 +78,9 @@ class _LoginViewState extends State<LoginView> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                 onPressed: (){
-                if(_formKey.currentState!.validate()){}
+                if(_formKey.currentState!.validate()){
+                  loginVM.loginApi();
+                }
                 },
 
                 child: Text('Login',style: TextStyle(color: Colors.white),)
