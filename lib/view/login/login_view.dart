@@ -75,16 +75,22 @@ class _LoginViewState extends State<LoginView> {
             SizedBox(
               height: 10.0,
             ),
+          Obx(() {
+           return loginVM.loading.value ?
+                CircularProgressIndicator() :
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-                onPressed: (){
-                if(_formKey.currentState!.validate()){
-                  loginVM.loginApi();
-                }
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    loginVM.loginApi();
+                  }
                 },
 
-                child: Text('Login',style: TextStyle(color: Colors.white),)
-            ),
+                child: Text('Login', style: TextStyle(color: Colors.white),)
+            );
+
+          }
+          ),
           ],
         ),
       ),
