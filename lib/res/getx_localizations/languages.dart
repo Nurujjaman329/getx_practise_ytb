@@ -12,7 +12,7 @@ class Languages extends Translations{
     },
 
     'bn_BD' : {
-      'email_hint' : 'ইমেইল'
+      'email_hint' : 'test'
     }
   };
 }

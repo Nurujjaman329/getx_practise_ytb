@@ -9,7 +9,7 @@ class HomeRepository {
 
    final _apiService = NetworkApiServices();
 
-  Future<UserListModel>  userListApi(var data) async {
+  Future<UserListModel>  userListApi() async {
     dynamic reponse = await _apiService.getApi(AppUrl.userListApi);
     return UserListModel.fromJson(reponse);
   }
