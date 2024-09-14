@@ -1,7 +1,7 @@
 import 'package:getx_practise/models/login/login_response_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class UserPrefernce {
+class UserPreference {
 
 Future<bool> saveUser(LoginResponseModel responsModel) async {
 
